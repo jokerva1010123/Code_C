@@ -1,0 +1,127 @@
+***TEST SUCESSFUL***
+
+№1  
+./main.exe c 8 test1.bin
+
+В файле в бинарном представлении:
+41 67 34 0 69 24 78 58
+
+№2 
+./main.exe c 15 test2.bin
+
+В файле в бинарном представлении: 
+41 67 34 0 69 24 78 58 62 64 5 45 81 27 61
+
+№3 
+./main.exe p test1.bin
+
+Вывод: 41 67 34 0 69 24 78 58
+
+№4 
+./main.exe p test2.bin
+
+Вывод: 41 67 34 0 69 24 78 58 62 64 5 45 81 27 61
+
+№5 
+./main.exe s test1.bin
+
+В файле в бинарном представлении: 
+0 24 34 41 58 67 69 78
+
+№5 
+./main.exe s test2.bin
+
+В файле в бинарном представлении: 
+0 5 24 27 34 41 45 58 61 62 64 67 69 78 81
+
+№6
+./main.exe p test1.bin
+
+Вывод: 0 24 34 41 58 67 69 78
+
+№7
+./main.exe p test2.bin
+
+Вывод: 0 5 24 27 34 41 45 58 61 62 64 67 69 78 81
+
+
+***TESTS FAILED***
+
+# Недостаток аргументов
+№1
+./main.exe
+
+Выход: main.exe <command> [<number>] <source file>
+
+№2
+./main.exe k.bin
+
+Выход: main.exe <command> [<number>] <source file>
+
+№3
+./main.exe c 4
+
+Выход: Not enough arguments
+
+№4
+./main.exe c kib.bin
+
+Выход: Not enough arguments
+
+
+№5
+./main.exe c kib.bin 34 df.bin
+
+Выход: main.exe <command> [<number>] <source file>
+
+
+№6
+./main.exe w test.bin
+
+Выход: Not enough arguments
+
+
+№7
+./main.exe s text.txt
+
+Выход: Open error
+
+№8
+./main.exe c 15.5 t.bin  
+
+Выход: Write error
+
+№9
+./main.exe c 0 test.bin
+
+Выход: Write error
+
+№10
+./main.exe c g test.bin
+
+Выход: Write error
+
+№11
+./main.exe c -8 test.bin
+
+Выход: Write error
+
+№12
+./main.exe p test.bin
+
+Вывод: Open error
+
+№13
+./main.exe p test_emp.bin
+
+Вывод: Open error
+
+№14
+./main.exe p test.bin
+
+Вывод: Open error
+
+№15
+./main.exe p test_emp.bin
+
+Вывод: Open error
